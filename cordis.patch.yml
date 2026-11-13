@@ -1,0 +1,9 @@
+# 一个包两个 entry，各管一件事：
+#   dsh-restart        —— 主功能：两个工具（登记交接 / 立刻重启）+ 启动后把消息投回会话
+#   dsh-restart/guard  —— 看门狗：主功能自己没加载起来时，由它把「插件加载失败」报进会话
+# 拆成两个 entry 是防呆的核心：index.js 被改坏时 guard.js 仍是好的，app 能起来且有人报信。
+- insert:
+    - id: dsh-restart
+      name: 'dsh-restart'
+    - id: dsh-restart-guard
+      name: 'dsh-restart/guard'

@@ -1,0 +1,35 @@
+{
+  "name": "dsh-restart",
+  "version": "0.1.3",
+  "private": true,
+  "type": "module",
+  "description": "让 agent 在会话里自己重启 DSH 桌面端：重启前落盘交接信息，重启后自动回到同一会话跑一轮验收并汇报结论",
+  "license": "MIT",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "restart", "self-check"],
+  "exports": {
+    ".": "./index.js",
+    "./guard": "./guard.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./lib/relaunch.mjs": "./lib/relaunch.mjs",
+    "./lib/spawn.mjs": "./lib/spawn.mjs",
+    "./lib/deliver.mjs": "./lib/deliver.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "guard.js",
+    "cordis.patch.yml",
+    "lib/store.mjs",
+    "lib/message.mjs",
+    "lib/deliver.mjs",
+    "lib/preflight.mjs",
+    "lib/relaunch.mjs",
+    "lib/spawn.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

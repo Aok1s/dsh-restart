@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# 运行时产物（插件正常不在这里产生，防手滑）
+*.log
+restart-data/
+.dsh/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 打包产物
+*.zip
+*.tgz
+dist/
